@@ -13,7 +13,7 @@ function NavbarElements() {
 			{/* <Link href="/" className="btn-click">
 				Home
 			</Link> */}
-			<hr className="md:hidden w-full" />
+			{/* <hr className="md:hidden w-full" /> */}
 			<SwitchThemeButton />
 			<LogoutButton />
 		</>
