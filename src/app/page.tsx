@@ -23,7 +23,7 @@ export default function HomePage() {
 	return (
 		<div className="flex flex-col gap-8 center">
 			<div className="header">You&apos;re in the App Page</div>
-			<div>Consider contributing in making the best Bungie API template</div>
+			<div>Think about participating in the creation of the optimal Bungie API template.</div>
 			<Socials size={64} />
 		</div>
 	);
