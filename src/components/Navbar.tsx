@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Logo from "./Logo";
 import clsx from "clsx";
 import SwitchThemeButton from "./SwitchThemeButton";
@@ -10,10 +9,6 @@ import LogoutButton from "./LogoutButton";
 function NavbarElements() {
 	return (
 		<>
-			{/* <Link href="/" className="btn-click">
-				Home
-			</Link> */}
-			{/* <hr className="md:hidden w-full" /> */}
 			<SwitchThemeButton />
 			<LogoutButton />
 		</>
