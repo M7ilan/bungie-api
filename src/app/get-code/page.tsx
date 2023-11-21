@@ -10,7 +10,7 @@ export default function GetCode() {
 	useEffect(() => {
 		if (code) {
 			(async () => {
-				const response = await fetch("/api/get-tokens", { method: "POST", body: JSON.stringify({ code }) });
+				const response = await fetch("/api/auth/get-tokens", { method: "POST", body: JSON.stringify({ code }) });
 				const json = await response.json();
 				if (response.ok) {
 					setUpTokens(json);

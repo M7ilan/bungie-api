@@ -38,7 +38,7 @@ export default async function checkTokens(): Promise<boolean> {
 	if (isTokenExpired(generated_at, access_token.expires_in)) {
 		console.log("Access token expired");
 		// Refresh the tokens using the refresh token
-		const response = await fetch("/api/refresh-tokens", { method: "POST", body: JSON.stringify({ refresh_token: refresh_token.value }) });
+		const response = await fetch("/api/auth/refresh-tokens", { method: "POST", body: JSON.stringify({ refresh_token: refresh_token.value }) });
 		const tokens = await response.json();
 		const result = setUpTokens(tokens);
 		if (result) return true;
