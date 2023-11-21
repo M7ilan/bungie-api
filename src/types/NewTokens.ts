@@ -1,4 +1,4 @@
-type NewTokens = {
+type NewTokensType = {
 	access_token: {
 		value: string;
 		expires_in: number;
