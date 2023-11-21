@@ -3,7 +3,7 @@
  * @param tokens - The tokens to be set up.
  * @returns True if the tokens were successfully set up in local storage, false otherwise.
  */
-export default function setUpTokens(tokens: Tokens): boolean {
+export default function setUpTokens(tokens: TokensType): boolean {
 	const newTokens = {
 		access_token: {
 			value: tokens.access_token,
