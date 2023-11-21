@@ -33,7 +33,11 @@ export default function HomePage() {
 	}, []);
 	return (
 		<>
-			<LoadingIcon classname={`${!isLoading && "opacity-0 pointer-events-none"}`} />
+			{isLoading && (
+				<div className={`${!isLoading && "opacity-0 pointer-events-none"} center`}>
+					<LoadingIcon size={64} />
+				</div>
+			)}
 			<div className={clsx("flex flex-col gap-12 center", { "opacity-0 pointer-events-none": isLoading })}>
 				<div className="flex flex-col gap-2">
 					<div className="header">Welcome {uniqueName}</div>
