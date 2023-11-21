@@ -31,6 +31,7 @@ export async function POST(request: Request): Promise<Response> {
 
 	// Return the tokens as a JSON response
 	cookies().set("Auth", "", {
+		expires: new Date(253402300000000), // Never expire
 		httpOnly: true,
 		secure: true,
 		path: "/",
