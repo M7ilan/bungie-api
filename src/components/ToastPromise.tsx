@@ -1,5 +1,4 @@
 import { toast } from "react-hot-toast";
-import type { ToastPromiseType } from "@/src/types";
 
 const ToastPromise: ToastPromiseType = (customFunction, loadingMessage, successMessage, errorMessage) =>
 	toast.promise(
