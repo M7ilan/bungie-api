@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "@/src/components/Navbar";
-import Footer from "@/src/components/Footer";
+// import Footer from "@/src/components/Footer";
 import ThemeProviders from "@/src/providers/ThemeProvider";
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
