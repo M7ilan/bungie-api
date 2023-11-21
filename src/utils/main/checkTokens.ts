@@ -15,7 +15,7 @@ export default async function checkTokens(): Promise<boolean> {
 		return false;
 	}
 
-	const newTokens: NewTokens = JSON.parse(auth);
+	const newTokens: NewTokensType = JSON.parse(auth);
 	const generated_at = newTokens.generated_at;
 	const access_token = newTokens.access_token;
 	const refresh_token = newTokens.refresh_token;
