@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Logout from "@/src/utils/main/logout";
 import { useRouter } from "next/navigation";
-import isLoggedInClient from "../utils/main/isLoggedInClient";
+import isLoggedInClient from "@@/utils/main/isLoggedInClient";
 
 export default function LogoutButton() {
 	const router = useRouter();
