@@ -1,13 +1,15 @@
 "use client";
 
+import LoadingIcon from "@/src/components/LoadingIcon";
 import fetchBungie from "@/src/utils/bungie/fetchBungie";
 import setUpUser from "@/src/utils/bungie/setUpUser";
 import setUpTokens from "@/src/utils/main/setUpTokens";
 import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function GetCode() {
 	const code = useSearchParams().get("code");
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		if (code) {
@@ -28,8 +30,11 @@ export default function GetCode() {
 					setUpUser(json2);
 				}
 
+				setIsLoading(false);
 				location.href = "/";
 			})();
 		}
 	}, []);
+
+	if (isLoading) return <div className="header center gap-4">Logging in... <LoadingIcon /></div>;
 }
