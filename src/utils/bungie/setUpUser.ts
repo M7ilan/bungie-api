@@ -1,4 +1,13 @@
-export default function setUpUser(info: GetMembershipsForCurrentUserType): boolean {
+import fetchBungie from "./fetchBungie";
+
+export default async function setUpUser(): Promise<boolean> {
+	const auth = localStorage.getItem("Auth");
+	if (!auth) return false;
+	const newAuth: NewTokensType = JSON.parse(auth);
+	const access_token = newAuth.access_token.value;
+	const response2 = await fetchBungie("/api/bungie/User/GetMembershipsForCurrentUser", { headers: { access_token } });
+	const info: GetMembershipsForCurrentUserType = await response2.json();
+
 	const newInfo: UserType = {
 		uniqueName: info.Response.bungieNetUser.uniqueName,
 		primaryMembershipId: info.Response.primaryMembershipId,
