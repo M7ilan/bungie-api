@@ -22,5 +22,6 @@ export default function setUpTokens(tokens: Tokens): boolean {
 	if (localStorage.getItem("Auth")) {
 		return true;
 	}
+
 	return false;
 }
